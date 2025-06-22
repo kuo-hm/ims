@@ -1,10 +1,8 @@
 'use client';
 import { Card } from '@/components/ui/card';
 import Link from 'next/link';
-import {
-  FaUser
-} from 'react-icons/fa';
-import {PersonalInformationStep,AddressStep,SecurityStep} from '@/components/steps/auth';
+import { FaUser } from 'react-icons/fa';
+import { PersonalInformationStep, AddressStep, SecurityStep } from '@/components/steps/auth';
 import { useRegisterContext } from '@/app/auth/context/register.context';
 
 export const RegisterForm = () => {
@@ -44,12 +42,11 @@ export const RegisterForm = () => {
                 </div>
               ))}
             </div>
-              <div className="space-y-6">
-                {currentStep === 0 && <PersonalInformationStep />}
-                {currentStep === 1 && <SecurityStep  />}
-                {currentStep === 2 && <AddressStep  />}
-               
-              </div>
+            <div className="space-y-6">
+              {currentStep === 0 && <PersonalInformationStep />}
+              {currentStep === 1 && <SecurityStep />}
+              {currentStep === 2 && <AddressStep />}
+            </div>
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-white/20" />
@@ -78,4 +75,3 @@ export const RegisterForm = () => {
     </div>
   );
 };
-
